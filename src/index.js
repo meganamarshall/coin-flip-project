@@ -4,6 +4,9 @@ const pickForm = document.getElementById('pick-form');
 const image = document.getElementById('animal-pic');
 const dogNode = document.getElementById('dog-count');
 const catNode = document.getElementById('cat-count');
+const radioForm = document.getElementById('radio-form');
+
+radioForm.elements.side.value;
 
 let catCount = 0;
 let dogCount = 0;
@@ -30,6 +33,13 @@ pickForm.addEventListener('submit', function(event) {
     image.classList.remove('hidden');
     
     
+});
+
+// start with this, use one form (just the radio form)
+radioForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    console.log(radioForm.elements.side.value);
 })
 
 // grab form node from DOM
